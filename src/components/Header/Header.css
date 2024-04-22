@@ -1,4 +1,16 @@
 .navList {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.navListItem {
+  text-transform: uppercase;
+  color: var(--text-brown);
+  font-weight: bold;
+}
+
+.navLogo {
+  width: 80px;
+  height: 80px;
 }

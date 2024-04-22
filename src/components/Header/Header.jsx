@@ -5,25 +5,29 @@ function Header() {
     <header className="header">
       <nav>
         <ul className="navList">
-          <li>
+          <li className="navListItem">
             <a href="#inicio">Inicio</a>
           </li>
-          <li>
+          <li className="navListItem">
             <a href="#animales">Animales en Adopción</a>
           </li>
-          <li>
+          <li className="navListItem">
             <a href="#colabora">Colabora</a>
           </li>
-          <li className="logo">
-            <img src="/ruta-al-logotipo.png" alt="Logotipo" />
-          </li>
           <li>
+            <img
+              className="navLogo"
+              src="./src/assets/Huellas Amigables.png"
+              alt="Logotipo Huellas Amigables"
+            />
+          </li>
+          <li className="navListItem">
             <a href="#nosotros">Quiénes somos</a>
           </li>
-          <li>
+          <li className="navListItem">
             <a href="#area-privada">Área privada</a>
           </li>
-          <li>
+          <li className="navListItem">
             <a href="#contacto">Contacto</a>
           </li>
         </ul>
