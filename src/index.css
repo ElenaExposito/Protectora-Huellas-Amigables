@@ -1,9 +1,10 @@
 :root {
+  --text-brown: #6b431f;
+  --background: #faf0dc;
+
   font-family: "Abril Fatface", Inter, system-ui, Avenir, Helvetica, Arial,
     sans-serif;
-  background-color: #faf0dc;
-
-  --text-brown: #6b431f;
+  background-color: var(--background);
 }
 
 body {

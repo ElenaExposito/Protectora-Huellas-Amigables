@@ -32,6 +32,11 @@ function Header() {
           </li>
         </ul>
       </nav>
+      <div className="footprintsLine">
+        <div className="imageFootprintsLine"></div>
+        <h1 className="logoName">Huellas Amigables</h1>
+        <div className="imageFootprintsLine"></div>
+      </div>
     </header>
   );
 }

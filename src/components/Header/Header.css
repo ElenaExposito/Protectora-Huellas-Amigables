@@ -14,3 +14,29 @@
   width: 80px;
   height: 80px;
 }
+
+.footprintsLine {
+  height: 30px;
+  width: 100%;
+  display: flex;
+}
+
+.logoName {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0 0.8rem;
+}
+
+.imageFootprintsLine {
+  width: 100%;
+  height: 100%;
+  background-size: auto 100%;
+  background-image: linear-gradient(
+      to left,
+      var(--background) 0%,
+      rgba(255, 255, 255, 0) 50%
+    ),
+    linear-gradient(to right, var(--background) 0%, rgba(255, 255, 255, 0) 50%),
+    url("/home/elena/react-workspace/projects/protectora/src/assets/Huellas.png");
+  background-repeat: repeat;
+}
