@@ -5,10 +5,10 @@
   padding-bottom: 1rem;
 }
 
-.menuTitle {
-  font-size: 1.5rem;
-  text-align: center;
-  color: var(--text-brown);
+.menuTitle,
+.burguerMenu,
+.menuLineStyle {
+  display: none;
 }
 
 .navList {
@@ -32,77 +32,9 @@
   color: var(--background);
 }
 
-.zero {
-  order: 0;
-}
-
-.one {
-  order: 1;
-}
-
-.two {
-  order: 2;
-}
-
-.three {
-  order: 3;
-}
-
-.four {
-  order: 4;
-}
-
-.five {
-  order: 5;
-}
-
-.six {
-  order: 6;
-}
-
-.seven {
-  order: 7;
-}
-
-.eight {
-  order: 8;
-}
-
-.nine {
-  order: 9;
-}
-
-.ten {
-  order: 10;
-}
-
-.eleven {
-  order: 11;
-}
-
-.twelve {
-  order: 12;
-}
-
-.thirteen {
-  order: 13;
-}
-
 .navLogo {
   width: 80px;
   height: 60px;
-}
-
-.menuLineStyle {
-  height: 2px;
-  border: none;
-  width: 100%;
-  background: linear-gradient(
-    to right,
-    var(--background),
-    var(--background-brown),
-    var(--background)
-  );
 }
 
 .footprintsLine {
@@ -131,19 +63,27 @@
   background-repeat: repeat;
 }
 
-.mobileMenu {
-  display: none;
-}
-
 /* Mobile menu */
 @media (width <= 1200px) {
-  /*
-  .mobileMenu {
-    display: block;
+  .navbar {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
+
+  .menuBasic {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .burguerMenu {
+    display: inherit;
+  }
+
+  .menuTitle,
   .navListItem,
-  .navLogo,
-  .logoName,
   .footprintsLine div:nth-child(3) {
     display: none;
   }
@@ -151,10 +91,15 @@
   hr {
     display: none;
   }
-  */
+
   .navList {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .logoName {
+    text-align: start;
+    padding: 0;
   }
 
   .seven {
@@ -189,5 +134,15 @@
     box-shadow: initial;
     background-color: initial;
     color: var(--text-brown);
+  }
+
+  .navLogo {
+    padding-left: 1rem;
+  }
+
+  .footprintsLine {
+    flex-direction: column-reverse;
+    height: 50px;
+    gap: 0.5rem;
   }
 }
