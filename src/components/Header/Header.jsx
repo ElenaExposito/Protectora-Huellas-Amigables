@@ -1,55 +1,102 @@
+import { useState } from "react";
 import "./Header.css";
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function handleOpenMenu() {
+    setIsMenuOpen((prev) => !prev);
+  }
+
   return (
     <header className="header">
       <nav id="nav" className="navbar open">
         <div className="menuBasic open">
           <h1 className="menuTitle open">Menú</h1>
-          <img
-            id="open"
-            className="burguerMenu"
-            src="./src/assets/Burguer icon.png"
-            alt="Abrir el Menú"
-          />
-          <img
-            id="close"
-            className="closedMenu"
-            src="./src/assets/Close icon.png"
-            alt="Cerrar el Menú"
-          />
-        </div>
-        <ul className="navList">
-          <hr className="menuLineStyle open zero"></hr>
-          <li className="navListItem open one">
-            <a href="#inicio">Inicio</a>
-          </li>
-          <hr className="menuLineStyle open two"></hr>
-          <li className="navListItem open three">
-            <a href="#animales">Animales en Adopción</a>
-          </li>
-          <hr className="menuLineStyle open four"></hr>
-          <li className="navListItem open five">
-            <a href="#colabora">Colabora</a>
-          </li>
-          <hr className="menuLineStyle open six"></hr>
-          <li className="seven">
+          {isMenuOpen ? null : (
             <img
               className="navLogo open"
               src="./src/assets/Huellas Amigables.png"
               alt="Logotipo Huellas Amigables"
             />
+          )}
+          <button onClick={handleOpenMenu} className="mobile">
+            {isMenuOpen ? (
+              <img
+                className="burguerMenu"
+                src="./src/assets/burger-icon.png"
+                alt="Abrir el Menú"
+              />
+            ) : (
+              <img
+                className="closedMenu"
+                src="./src/assets/close-icon.png"
+                alt="Cerrar el Menú"
+              />
+            )}
+          </button>
+        </div>
+        {isMenuOpen ? (
+          <ul className="navList mobile">
+            <hr className="menuLineStyle open"></hr>
+            <li className="navListItem open">
+              <a href="#inicio">Inicio</a>
+            </li>
+            <hr className="menuLineStyle open"></hr>
+            <li className="navListItem open">
+              <a href="#animales">Animales en Adopción</a>
+            </li>
+            <hr className="menuLineStyle open"></hr>
+            <li className="navListItem open">
+              <a href="#colabora">Colabora</a>
+            </li>
+            <hr className="menuLineStyle open"></hr>
+
+            <li className="navListItem open">
+              <a href="#nosotros">Quiénes somos</a>
+            </li>
+            <hr className="menuLineStyle open"></hr>
+            <li className="navListItem open">
+              <a href="#area-privada">Área privada</a>
+            </li>
+            <hr className="menuLineStyle open"></hr>
+            <li className="navListItem open">
+              <a href="#contacto">Contacto</a>
+            </li>
+            <hr className="menuLineStyle open"></hr>
+            <li>
+              <img
+                className="navLogo open"
+                src="./src/assets/Huellas Amigables.png"
+                alt="Logotipo Huellas Amigables"
+              />
+            </li>
+          </ul>
+        ) : null}
+        <ul className="navList desktop">
+          <li className="navListItem">
+            <a href="#inicio">Inicio</a>
           </li>
-          <hr className="menuLineStyle open height"></hr>
-          <li className="navListItem open nine">
+          <li className="navListItem">
+            <a href="#animales">Animales en Adopción</a>
+          </li>
+          <li className="navListItem">
+            <a href="#colabora">Colabora</a>
+          </li>
+          <li>
+            <img
+              className="navLogo"
+              src="./src/assets/Huellas Amigables.png"
+              alt="Logotipo Huellas Amigables"
+            />
+          </li>
+          <li className="navListItem">
             <a href="#nosotros">Quiénes somos</a>
           </li>
-          <hr className="menuLineStyle open ten"></hr>
-          <li className="navListItem open eleven">
+          <li className="navListItem">
             <a href="#area-privada">Área privada</a>
           </li>
-          <hr className="menuLineStyle open twelve"></hr>
-          <li className="navListItem open thirteen">
+          <li className="navListItem">
             <a href="#contacto">Contacto</a>
           </li>
         </ul>
