@@ -1,13 +1,22 @@
 .navList {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-around;
 }
 
 .navListItem {
   text-transform: uppercase;
   color: var(--text-brown);
   font-weight: bold;
+  padding: 0.8rem;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.navListItem:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-brown);
+  color: var(--background);
 }
 
 .navLogo {
